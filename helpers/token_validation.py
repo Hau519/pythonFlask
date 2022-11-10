@@ -1,5 +1,5 @@
 import jwt
-from flask import request
+from flask import request, jsonify
 import app_config as config
 
 
@@ -23,3 +23,13 @@ def validateJWT():
         return 401
     except:
         return 400
+
+
+
+
+# def mainValidation(token):
+#     token = validateJWT()
+#     if token == 400:
+#         return jsonify({'error': 'Token is missing in the request.'}), 400
+#     if token == 401:
+#         return jsonify({'error': 'Invalid authentication token.'}), 401

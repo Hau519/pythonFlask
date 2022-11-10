@@ -14,7 +14,6 @@ def generateHashPassword(password):
 
 
 def createUser(userInformation):
-    newUser = None
     try:
         newUser = User()
         newUser.name = userInformation['name'].lower()
